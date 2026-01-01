@@ -1,0 +1,27 @@
+{
+  "name": "get_to_know_with_tailwind",
+  "version": "1.0.0",
+  "description": "Exploring this framework",
+  "homepage": "https://github.com/mantagute/get_to_know_with_tailwind#readme",
+  "bugs": {
+    "url": "https://github.com/mantagute/get_to_know_with_tailwind/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mantagute/get_to_know_with_tailwind.git"
+  },
+  "license": "ISC",
+  "author": "Mantagute",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server",
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./build/css/style.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "live-server": "^1.2.2",
+    "tailwindcss": "^4.1.18"
+  }
+}
