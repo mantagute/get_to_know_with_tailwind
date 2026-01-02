@@ -17,11 +17,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "live-server",
-    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./build/css/style.css --watch"
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./build/css/style.css --watch",
+    "prettier": "npx prettier --write **/*.html"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.18",
     "live-server": "^1.2.2",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4.1.18"
   }
 }
