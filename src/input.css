@@ -2,21 +2,41 @@
 
 @theme {
     --z-110: 110;
+    --animate-open-menu: open-menu 0.5s ease-in-out forwards;
+
+    @keyframes open-menu {
+        0% { transform: scaleY(0); }
+        80% { transform: scaleY(1.2); }
+        100% { transform: scaleY(1); }
+    }
 }
 
+
 @custom-variant widescreen (@media (min-aspect-ratio: 3/2));
-@custom-variant tallscreen (@media (min-aspect-ratio: 1/2));
+@custom-variant tallscreen (@media (min-aspect-ratio: 13/20));
 
 
 @utility section-min-height {
     min-height: 100vh;
 
     @variant widescreen {
-        min-height: calc(100vh - 50px);
+        min-height: calc(100vh - 68px);
     }
     @variant tallscreen {
-        min-height: calc(100vh - 50px);
+        min-height: calc(100vh - 68px);
     }
 }
 
+@utility toggle-btn {
+    & > div {
+        @apply bg-transparent rotate-360deg;
+    }
 
+    & > div::before {
+        @apply translate-y-0 rotate-45;
+    }
+
+    & > div::after {
+        @apply translate-y-0 -rotate-45;
+    }
+}
