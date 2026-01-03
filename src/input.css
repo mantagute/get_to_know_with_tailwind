@@ -3,6 +3,9 @@
 @theme {
     --z-110: 110;
     --animate-open-menu: open-menu 0.5s ease-in-out forwards;
+    --color-papayawhip-light: #fef4e4;
+    --color-papayawhip: #ffefd5;
+    --color-papayawhip-dark: #fee5bc;
 
     @keyframes open-menu {
         0% { transform: scaleY(0); }
@@ -13,7 +16,7 @@
 
 
 @custom-variant widescreen (@media (min-aspect-ratio: 3/2));
-@custom-variant tallscreen (@media (min-aspect-ratio: 13/20));
+@custom-variant tallscreen (@media (max-aspect-ratio: 13/20));
 
 
 @utility section-min-height {
@@ -29,7 +32,7 @@
 
 @utility toggle-btn {
     & > div {
-        @apply bg-transparent rotate-360deg;
+        @apply bg-transparent rotate-[360deg];
     }
 
     & > div::before {

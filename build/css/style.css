@@ -45,6 +45,7 @@
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --animate-open-menu: open-menu 0.5s ease-in-out forwards;
+    --color-papayawhip: #ffefd5;
   }
 }
 @layer base {
@@ -213,15 +214,6 @@
   }
   .top-17 {
     top: calc(var(--spacing) * 17);
-  }
-  .top-68 {
-    top: calc(var(--spacing) * 68);
-  }
-  .top-\[68\] {
-    top: 68;
-  }
-  .top-\[68px\] {
-    top: 68px;
   }
   .z-110 {
     z-index: 110;
@@ -455,6 +447,9 @@
   }
   .text-indigo-700 {
     color: var(--color-indigo-700);
+  }
+  .text-papayawhip {
+    color: var(--color-papayawhip);
   }
   .text-slate-500 {
     color: var(--color-slate-500);
@@ -884,21 +879,21 @@
     @media (min-aspect-ratio: 3/2) {
       min-height: 100vh;
       @media (min-aspect-ratio: 3/2) {
-        min-height: calc(100vh - 50px);
+        min-height: calc(100vh - 68px);
       }
-      @media (min-aspect-ratio: 13/20) {
-        min-height: calc(100vh - 50px);
+      @media (max-aspect-ratio: 13/20) {
+        min-height: calc(100vh - 68px);
       }
     }
   }
   .tallscreen\:section-min-height {
-    @media (min-aspect-ratio: 13/20) {
+    @media (max-aspect-ratio: 13/20) {
       min-height: 100vh;
       @media (min-aspect-ratio: 3/2) {
-        min-height: calc(100vh - 50px);
+        min-height: calc(100vh - 68px);
       }
-      @media (min-aspect-ratio: 13/20) {
-        min-height: calc(100vh - 50px);
+      @media (max-aspect-ratio: 13/20) {
+        min-height: calc(100vh - 68px);
       }
     }
   }
